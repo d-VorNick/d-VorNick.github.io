@@ -1,0 +1,161 @@
+body {
+	margin: 0;
+	background-color: #000;
+	font-family: monospace;
+	display: flex;
+	flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header, #footer {
+	background: url(../res/bg.gif);
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	box-shadow: #014600 0px 0px 10px 7px;
+}
+
+#header {
+	top: 0;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer {
+	bottom: 0;
+	box-shadow: none;
+}
+
+#main {
+	margin-top: 200px;
+    margin-bottom: 150px;
+	color: #03b300;
+	background-color: #000;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+	width: 1000px;
+}
+
+.header__logo {
+	display: inline-block;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    background-image: url(../res/logo.png);
+    background-position: center;
+    background-size: cover;
+	box-shadow: rgb(0 140 36 / 70%) 5px 5px 12px;
+}
+
+.header__title {
+	text-shadow: 8px 5px 3px rgb(39 255 0 / 50%);
+	margin-left: 20px;
+}
+
+.header__nav {
+	font-size: 20px;
+}
+.header__nav a:hover {
+	background: radial-gradient(ellipse at bottom, #03b300 0%, #013901 50%);
+}
+.header__nav a {
+	border: #03b300 1px solid;
+	text-shadow: none;
+	background-color: rgb(3 199 0 / 10%);
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	color: #03b300;
+}
+
+.footer__contacts_links {
+	list-style-type: none;
+	padding: 0;
+}
+
+.footer__contacts_links a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.footer__contacts_links a:visited {
+	color: #FFF;
+}
+
+.main__mycode code {
+	white-space: pre-wrap;
+}
+
+
+section {
+	border: 7px #03b300 double;
+    border-radius: 7px;
+    width: fit-content;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+section > .title {
+	border-bottom: 1px #03b300 solid;
+	padding-left: 15px;
+	font-family: monospace;
+	margin-bottom: 0;
+}
+
+section > .content {
+	padding: 5px;
+	overflow: auto;
+}
+
+.main__mycode > .content {
+	height: 400px;
+}
+
+.main__myanimal > .content {
+	height: 300px;
+}
+
+.main__myfacts {
+	width: 921px;
+}
+
+.main__myfacts > .content {
+	max-height: 500px;
+	margin-left: 0px;
+}
+
+section > .content::-webkit-scrollbar {
+	width: 5px;
+	background-color: #000;
+}
+
+section > .content::-webkit-scrollbar-thumb {
+	width: 5px;
+	background-color: #03b300;
+}
+
+.command {
+}
+.command_div {
+	width: 1500px;
+	position: fixed;
+	top: 827px;
+	border: #03b300 solid 1px;
+
+}
+.command_div #console {
+	width: 1428px;
+	background-color: rgb(3 199 0 / 10%);
+	color: #03b300;
+}
+
+.time_display {
+	width: 450px;
+	text-align: center;
+	font-size: 50px;
+}

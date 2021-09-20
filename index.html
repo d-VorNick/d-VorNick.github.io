@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<title>Никита Воронин, M33041</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<header id="header">
+			<div class="header__logo"></div>
+			<div class="header__title">
+					<div><h1>Воронин Никита</h1></div>
+					<div><h2>Студент M33041</h2></div>
+					<div><nav class="header__nav">
+						<a href="#my_code">Мой код</a>
+						<a href="#my_animal">Мое животное</a>
+						<a href="#my_facts">Факты</a>
+					</nav></div>
+			</div>
+		</header>
+		<main id="main">
+			
+			<section id="my_code" class="main__mycode">
+				<h2 class="title">My Code</h2>
+				<div class="content">
+				<code>
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int N, M, counter;
+vector<bool>visited;
+//матрица смежности графа
+vector<vector<int>> graph;
+//поиск в глубину
+void DFS(int st) {
+counter++;
+visited[st] = true;
+for (int r = 0; r < N; r++)
+	if ((graph[st][r] != 0) && (!visited[r]))
+		DFS(r);
+}
+
+void main() {
+	int s = 0;
+	counter = 0;
+	int v1, v2;
+	cin >> N >> M;
+	graph.resize(N);
+	visited.resize(N);
+	for (int i = 0; i < N; i++) {
+		visited[i] = false;
+		graph[i].resize(N);
+	}
+	for (int i = 0; i < M; i++) {
+		cin >> v1 >> v2;
+		graph[v1 - 1][v2 - 1] = 1;
+	}
+	DFS(s);
+	if (counter == N) {
+		cout << "YES";
+	}
+	else {
+		cout << "NO";
+	}
+}
+				</code>
+				</div>
+			</section>
+			<section id="my_animal" class="main__myanimal">
+				<h2 class="title">My Animal</h2>
+				<div class="content">
+				<pre>                              ___,--------,____
+                      __--~~~~                 ~~---,_
+                   ,-'                  __,--,_       `\,___,-,__
+                ,-'                 __/'/-~~~\  `  ` . '    , |  `~~\
+             _/`      _/~~      '~~   \,_\_ O /        '  '~_/'      `\
+           /'        '                   =-'~~  _  /  ~   /'          `\
+        _/'  /~                            ,--,____,-----|,_,-,_       `\
+    _,/'    '              ,-'      _      `~'------'~~~~~--    `~~~~\  |
+ ,-'             /~       '    ,-~~~         _,       ,-=~~~~~~~~~~~~'| |
+~              .'             '         ,   '      /~`                |/
+                                  /' ,/'       _/~'
+                   ,       /    /`          _/~ 
+        /~        /      /`               /' 
+      .'                                /' 
+                       /'      .      /
+                      `       /'     | 
+                                    '
+				</pre>
+				</div>
+			</section>
+			<section id="my_facts" class="main__myfacts">
+				<h2 class="title">My Facts </h2>
+				<div class="content">
+					<article>
+						<ol reversed>
+							<del> <p>Я родился нормальным человеком</p></del>
+							<ins><p>Я сделал лабу по вебу</p></ins>
+							<p>Я написал поиск в глубину</p>
+							<p>Я окончил второй курс</p>
+							<p>Я выполнил пункт 5</p>
+						</ol>
+					</article>
+					<article>
+						<dl>
+							<dt>Что я не смог сделать</dt>
+							<dd>Поспать</dd>
+							<dt><b>Сон - это важно</b></dt>
+							<dd><strong>необходимо минимум 6 часов сна в день</strong></dd>
+						</dl>
+						<span>Формула успеха: a + b</span><sub>2</sub><span> = c</span><sup>5</sup>
+					</article>
+				</div>
+			</section>
+			<div class="command_div">
+				<a style="padding-left: 3px; padding-right: 3px">Консоль:</a><input type="text" name="first_name" id="console" onchange='eventForm(this.value)'/>
+			</div>
+		</main>
+		<footer id="footer">
+			<div class="footer__contacts">
+				<aside>
+						<h2>Мои контакты</h2>
+						<ul class="footer__contacts_links">
+							<li><a href="https://vk.com/id516018519">Вконтакте</a></li>
+							<li><a href="https://github.com/d-VorNick">GitHub</a></li>
+						</ul>
+				</aside>
+			</div>
+		</footer>
+		<script src="./js/index.js"></script>
+	</body>
+
+</html>
