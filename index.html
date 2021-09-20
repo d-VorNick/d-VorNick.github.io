@@ -27,51 +27,50 @@
         <h2 class="title">Мой код</h2>
         <div class="content">
             <code>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <algorithm>
 
-                #include <iostream>
-                    #include <fstream>
-                        #include <string>
-                            #include <vector>
-                                #include <algorithm>
+using namespace std;
 
-                                    using namespace std;
+int N, M, counter;
+vector<bool>visited;
+//матрица смежности графа
+vector<vector<int>> graph;
+//поиск в глубину
+void DFS(int st) {
+	counter++;
+	visited[st] = true;
+	for (int r = 0; r < N; r++)
+		if ((graph[st][r] != 0) && (!visited[r]))
+			DFS(r);
+}
 
-                                    int N, M, counter;
-                                    vector<bool>visited;
-                                        //матрица смежности графа
-                                        vector<vector<int>> graph;
-                                            //поиск в глубину
-                                            void DFS(int st) {
-                                            counter++;
-                                            visited[st] = true;
-                                            for (int r = 0; r < N; r++)
-                                            if ((graph[st][r] != 0) && (!visited[r]))
-                                            DFS(r);
-                                            }
-
-                                            void main() {
-                                            int s = 0;
-                                            counter = 0;
-                                            int v1, v2;
-                                            cin >> N >> M;
-                                            graph.resize(N);
-                                            visited.resize(N);
-                                            for (int i = 0; i < N; i++) {
-                                            visited[i] = false;
-                                            graph[i].resize(N);
-                                            }
-                                            for (int i = 0; i < M; i++) {
-                                            cin >> v1 >> v2;
-                                            graph[v1 - 1][v2 - 1] = 1;
-                                            }
-                                            DFS(s);
-                                            if (counter == N) {
-                                            cout << "YES";
-                                            }
-                                            else {
-                                            cout << "NO";
-                                            }
-                                            }
+void main() {
+	int s = 0;
+	counter = 0;
+	int v1, v2;
+	cin >> N >> M;
+	graph.resize(N);
+	visited.resize(N);
+	for (int i = 0; i < N; i++) {
+		visited[i] = false;
+		graph[i].resize(N);
+	}
+	for (int i = 0; i < M; i++) {
+		cin >> v1 >> v2;
+		graph[v1 - 1][v2 - 1] = 1;
+	}
+	DFS(s);
+	if (counter == N) {
+		cout << "YES";
+	}
+	else {
+		cout << "NO";
+	}
+}
             </code>
         </div>
     </section>
