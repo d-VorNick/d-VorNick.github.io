@@ -143,8 +143,6 @@ section > .content::-webkit-scrollbar-thumb {
 }
 .command_div {
 	width: 1500px;
-	position: fixed;
-	top: 827px;
 	border: #03b300 solid 1px;
 
 }
