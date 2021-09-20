@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Лаба по веб-программированию">
-    <meta name="keywords" content="HTML,CSS,JavaScript">
-    <meta name="author" content="html5css">
-    <title>Никита Воронин, M33041</title>
-    <link rel="stylesheet" href="./css/style.css" />
-</head>
-<body>
-<header id="header">
-    <div class="header__logo"></div>
-    <div class="header__title">
-        <div><h1>Воронин Никита</h1></div>
-        <div><h2>Студент M33041</h2></div>
-        <div><nav class="header__nav">
-                <a href="#my_code">Мой код</a>
-                <a href="#my_animal">Мое животное</a>
-                <a href="#my_facts">Факты</a>
-            </nav></div>
-    </div>
-</header>
-<main id="main">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Лаба по веб-программированию">
+  		<meta name="keywords" content="HTML,CSS,JavaScript">
+  		<meta name="author" content="html5css">
+		<title>Никита Воронин, M33041</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<header id="header">
+			<div class="header__logo"></div>
+			<div class="header__title">
+					<div><h1>Воронин Никита</h1></div>
+					<div><h2>Студент M33041</h2></div>
+					<div><nav class="header__nav">
+						<a href="#my_code">Мой код</a>
+						<a href="#my_animal">Мое животное</a>
+						<a href="#my_facts">Факты</a>
+					</nav></div>
+			</div>
+		</header>
+		<main id="main">
+			
+			<section id="my_code" class="main__mycode">
+				<h2 class="title">Мой код</h2>
+				<div class="content">
+				<code>
 
-    <section id="my_code" class="main__mycode">
-        <h2 class="title">Мой код</h2>
-        <div class="content">
-            <code>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -41,11 +42,11 @@ vector<bool>visited;
 vector<vector<int>> graph;
 //поиск в глубину
 void DFS(int st) {
-	counter++;
-	visited[st] = true;
-	for (int r = 0; r < N; r++)
-		if ((graph[st][r] != 0) && (!visited[r]))
-			DFS(r);
+counter++;
+visited[st] = true;
+for (int r = 0; r < N; r++)
+	if ((graph[st][r] != 0) && (!visited[r]))
+		DFS(r);
 }
 
 void main() {
@@ -71,12 +72,12 @@ void main() {
 		cout << "NO";
 	}
 }
-            </code>
-        </div>
-    </section>
-    <section id="my_animal" class="main__myanimal">
-        <h2 class="title">Мое животное</h2>
-        <div class="content">
+				</code>
+				</div>
+			</section>
+			<section id="my_animal" class="main__myanimal">
+				<h2 class="title">Мое животное</h2>
+				<div class="content">
 				<pre>                              ___,--------,____
                       __--~~~~                 ~~---,_
                    ,-'                  __,--,_       `\,___,-,__
@@ -95,46 +96,47 @@ void main() {
                       `       /'     | 
                                     '
 				</pre>
-        </div>
-    </section>
-    <section id="my_facts" class="main__myfacts">
-        <h2 class="title">Факты</h2>
-        <div class="content">
-            <article>
-                <ol reversed>
-                    <del> <p>Я родился нормальным человеком</p></del>
-                    <ins><p>Я сделал лабу по вебу</p></ins>
-                    <p><i>Я написал поиск в глубину</i></p>
-                    <p><em>Я окончил второй курс</em></p>
-                    <p>Я выполнил пункт 5</p>
-                </ol>
-            </article>
-            <article>
-                <dl>
-                    <dt>Что я не смог сделать</dt>
-                    <dd>Поспать</dd>
-                    <dt><b>Сон - это важно</b></dt>
-                    <dd><strong>Необходимо минимум 6 часов сна в день</strong></dd>
-                </dl>
-                <span>Формула успеха: a + b</span><sub>2</sub><span> = c</span><sup>5</sup>
-            </article>
-        </div>
-    </section>
-</main>
-<footer id="footer">
-    <div class="command_div">
-        <a style="padding-left: 3px; padding-right: 3px">Консоль:</a><input type="text" name="first_name" id="console" onchange='eventForm(this.value)'/>
-    </div>
-    <div class="footer__contacts">
-        <aside>
-            <h2>Мои контакты</h2>
-            <ul class="footer__contacts_links">
-                <li><a href="https://vk.com/id516018519">Вконтакте</a></li>
-                <li><a href="https://github.com/d-VorNick">GitHub</a></li>
-            </ul>
-        </aside>
-    </div>
-</footer>
-<script src="./js/index.js"></script>
-</body>
+				</div>
+			</section>
+			<section id="my_facts" class="main__myfacts">
+				<h2 class="title">Факты</h2>
+				<div class="content">
+					<article>
+						<ol reversed>
+							<del> <p>Я родился нормальным человеком</p></del>
+							<ins><p>Я сделал лабу по вебу</p></ins>
+							<p><i>Я написал поиск в глубину</i></p>
+							<p><em>Я окончил второй курс</em></p>
+							<p>Я выполнил пункт 5</p>
+						</ol>
+					</article>
+					<article>
+						<dl>
+							<dt>Что я не смог сделать</dt>
+							<dd>Поспать</dd>
+							<dt><b>Сон - это важно</b></dt>
+							<dd><strong>Необходимо минимум 6 часов сна в день</strong></dd>
+						</dl>
+						<span>Формула успеха: a + b</span><sub>2</sub><span> = c</span><sup>5</sup>
+					</article>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<div class="command_div">
+				<a style="padding-left: 3px; padding-right: 3px">Консоль:</a><input type="text" name="first_name" id="console" onchange='eventForm(this.value)'/>
+			</div>
+			<div class="footer__contacts">
+				<aside>
+						<h2>Мои контакты</h2>
+						<ul class="footer__contacts_links">
+							<li><a href="https://vk.com/id516018519">Вконтакте</a></li>
+							<li><a href="https://github.com/d-VorNick">GitHub</a></li>
+						</ul>
+				</aside>
+			</div>
+		</footer>
+		<script src="./js/index.js"></script>
+	</body>
+
 </html>
