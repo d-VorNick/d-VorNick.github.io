@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	background-color: #000;
 	font-family: monospace;
+	font-weight: normal;
 	display: flex;
 	flex-wrap: wrap;
     flex-direction: column;
@@ -10,12 +11,14 @@ body {
 
 #header {
 	background: url(../res/bg.gif);
+
 	color: #fff;
 	text-align: center;
 	padding: 10px 0;
 	position: fixed;
 	width: 100%;
 	box-shadow: #014600 0px 0px 10px 7px;
+
 }
 
 #header {
@@ -57,7 +60,8 @@ body {
     background-image: url(../res/logo.png);
     background-position: center;
     background-size: cover;
-	box-shadow: rgb(0 140 36 / 70%) 5px 5px 12px;
+	/*box-shadow: rgb(0 140 36 / 70%) 5px 5px 12px;*/
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 100, 0, 0.5));
 }
 
 .header__title {
@@ -84,6 +88,10 @@ body {
 .footer__contacts_links {
 	list-style-type: none;
 	padding: 0;
+}
+
+.footer__contacts h2 {
+	text-decoration: underline;
 }
 
 .footer__contacts_links a {
@@ -129,6 +137,7 @@ section > .content {
 
 .main__myfacts {
 	width: 921px;
+	text-transform: capitalize;
 }
 
 .main__myfacts > .content {
