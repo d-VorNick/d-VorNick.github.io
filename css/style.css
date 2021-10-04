@@ -199,20 +199,13 @@ input {
 	width: 1000px;
 }
 
+
 .clock {
-	visibility: hidden;
-}
-
-@media screen {
-	.clock {
-		display: inline-block;
-
-		visibility: visible;
-		overflow: hidden;
-		width: 400px;
-		height: 400px;
-		filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 100, 0, 0.5));
-	}
+	display: inline-block;
+	overflow: hidden;
+	width: 400px;
+	height: 400px;
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 100, 0, 0.5));
 }
 
 
