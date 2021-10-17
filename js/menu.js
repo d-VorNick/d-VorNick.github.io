@@ -1,10 +1,19 @@
-/* Когда пользователь нажимает на кнопку,
-переключение между скрытием и отображением раскрывающегося содержимого */
+window.onload = function() {
+    var all_links = document.getElementById("myDropdown").getElementsByTagName("a"),
+        i=0, len=all_links.length,
+        full_path = location.href.split("d-VorNick.github.io")[1];
+        alert(full_path);
+    for(; i<len; i++) {
+        if(all_links[i].href.split('#')[0] === full_path) {
+            all_links[i].className += " active";
+        }
+    }
+}
+
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// Закройте выпадающее меню, если пользователь щелкает за его пределами
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");

@@ -4,9 +4,23 @@
     <meta charset="utf-8">
     <title>test</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/menu.js"></script>
+    <script src="../js/test.js"></script>
+    <script src="../js/time.js"></script>
 </head>
 <body>
 <header id="header" style="height: 50px">
+    <nav class="header__nav">
+        <div class="dropdown">
+            <a onclick="myFunction()" class="dropbtn">Навигация</a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/">Начальная</a>
+                <a href="/html/table.html">Таблица</a>
+                <a href="/html/test.html">Часы</a>
+                <a href="/html/photos.html">Галерея</a>
+            </div>
+        </div>
+    </nav>
 </header>
 <main id="main_clock">
     <img src="../res/clock.png" class="clock" alt="clock">
@@ -26,7 +40,5 @@
         </aside>
     </div>
 </footer>
-<script src="../js/test.js"></script>
-<script src="../js/time.js"></script>
 </body>
 </html>
