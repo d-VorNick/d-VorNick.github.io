@@ -1,7 +1,7 @@
 window.onload = function() {
     var all_links = document.getElementById("myDropdown").getElementsByTagName("a"),
         i=0, len=all_links.length,
-        full_path = location.href.split("d-VorNick.github.io")[1];
+        full_path = location.href.split("d-VorNick.github.io");
         alert(full_path);
     for(; i<len; i++) {
         if(all_links[i].href.split('#')[0] === full_path) {
