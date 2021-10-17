@@ -4,7 +4,7 @@ window.onload = function() {
         full_path = location.href.split("d-vornick.github.io")[1];
 
     for(; i<len; i++) {
-        if(all_links[i].href.split('#')[0] === full_path) {
+        if(all_links[i].href.split("d-vornick.github.io")[1] === full_path) {
             all_links[i].className += " active";
         }
     }
