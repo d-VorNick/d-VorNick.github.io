@@ -284,3 +284,45 @@ tr:nth-child(even) td {
 	color: black;
 }
 
+.dropbtn {
+	border: #03b300 1px solid;
+	font-size: 20px;
+	text-shadow: none;
+	background-color: rgb(3 199 0 / 10%);
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	color: #03b300;
+}
+
+.dropbtn:hover {
+	background: radial-gradient(ellipse at bottom, #03b300 0%, #013901 50%);
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+	display: block;
+	background-color: #001d00;
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Показать выпадающее меню (используйте JS, чтобы добавить этот класс .dropdown-content содержимого, когда пользователь нажимает на кнопку выпадающего списка) */
+.show {display:block;}
+
+.active {
+	background-color: black;
+}
