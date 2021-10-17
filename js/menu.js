@@ -9,7 +9,7 @@ window.onload = function() {
     }
 }
 
-function myFunction() {
+function showMenu() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
