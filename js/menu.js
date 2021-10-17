@@ -1,8 +1,8 @@
 window.onload = function() {
     var all_links = document.getElementById("myDropdown").getElementsByTagName("a"),
         i=0, len=all_links.length,
-        full_path = location.href.split("d-vornick.github.io");
-        alert(full_path);
+        full_path = location.href.split("d-vornick.github.io")[1];
+
     for(; i<len; i++) {
         if(all_links[i].href.split('#')[0] === full_path) {
             all_links[i].className += " active";
