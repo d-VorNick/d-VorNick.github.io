@@ -27,18 +27,18 @@
 				<h2 class="title">Мой код</h2>
 				<div class="content">
 				<code>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-#include <algorithm>
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
 
 using namespace std;
 
 int N, M, counter;
-vector<bool>visited;
+vector&lt;bool&gt;visited;
 //матрица смежности графа
-vector<vector<int>> graph;
+vector&lt;vector&lt;int&gt;&gt; graph;
 //поиск в глубину
 void DFS(int st) {
 counter++;
@@ -122,15 +122,13 @@ void main() {
 			</section>
 		</main>
 		<footer id="footer">
-			<div class="command_div">
-				<a style="padding-left: 3px; padding-right: 3px">Консоль:</a><input type="text" name="first_name" id="console" onchange='eventForm(this.value)'/>
-			</div>
+				<input type="text" name="first_name" id="console" placeholder="Консоль" onchange='eventForm(this.value)'/>
 			<div class="footer__contacts">
 				<aside>
 						<h2>Мои контакты</h2>
 						<ul class="footer__contacts_links">
-							<li><a href="https://vk.com/id516018519">Вконтакте</a></li>
-							<li><a href="https://github.com/d-VorNick">GitHub</a></li>
+							<li><a href="https://vk.com/id516018519" target="_blank">Вконтакте</a></li>
+							<li><a href="https://github.com/d-VorNick" target="_blank">GitHub</a></li>
 						</ul>
 				</aside>
 			</div>

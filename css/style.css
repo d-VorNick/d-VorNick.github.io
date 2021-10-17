@@ -2,20 +2,23 @@ body {
 	margin: 0;
 	background-color: #000;
 	font-family: monospace;
+	font-weight: normal;
 	display: flex;
 	flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
 }
 
-#header, #footer {
+#header {
 	background: url(../res/bg.gif);
+
 	color: #fff;
 	text-align: center;
 	padding: 10px 0;
 	position: fixed;
 	width: 100%;
-	box-shadow: #014600 0px 0px 10px 7px;
+	box-shadow: #014600 0 0 10px 7px;
+
 }
 
 #header {
@@ -27,7 +30,14 @@ body {
 
 #footer {
 	bottom: 0;
-	box-shadow: none;
+	/*box-shadow: none;*/
+	background: url(../res/bg.gif);
+	color: #fff;
+	text-align: center;
+	/*padding: 10px 0;*/
+	position: fixed;
+	width: 100%;
+	box-shadow: #014600 0 0 10px 2px;
 }
 
 #main {
@@ -50,7 +60,8 @@ body {
     background-image: url(../res/logo.png);
     background-position: center;
     background-size: cover;
-	box-shadow: rgb(0 140 36 / 70%) 5px 5px 12px;
+	/*box-shadow: rgb(0 140 36 / 70%) 5px 5px 12px;*/
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 100, 0, 0.5));
 }
 
 .header__title {
@@ -77,6 +88,10 @@ body {
 .footer__contacts_links {
 	list-style-type: none;
 	padding: 0;
+}
+
+.footer__contacts h2 {
+	text-decoration: underline;
 }
 
 .footer__contacts_links a {
@@ -117,16 +132,17 @@ section > .content {
 }
 
 .main__myanimal > .content {
-	height: 300px;
+	height: 400px;
 }
 
 .main__myfacts {
 	width: 921px;
+	text-transform: capitalize;
 }
 
 .main__myfacts > .content {
 	max-height: 500px;
-	margin-left: 0px;
+	margin-left: 0;
 }
 
 section > .content::-webkit-scrollbar {
@@ -139,16 +155,27 @@ section > .content::-webkit-scrollbar-thumb {
 	background-color: #03b300;
 }
 
-.command {
-}
-.command_div {
-	width: 1500px;
-	border: #03b300 solid 1px;
+#console {
+	width: 100%;
+	background-color: rgb(3 199 0 / 10%);
+	color: #03b300;
+	border-top: 1px;
+	border-top-color: #03b300;
 
 }
-.command_div #console {
-	width: 1428px;
-	background-color: rgb(3 199 0 / 10%);
+input {
+	outline: none;
+	border-color: #03b300;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+	color: #03b300;
+	opacity: 1;
+}
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder {
 	color: #03b300;
 }
 
@@ -156,4 +183,97 @@ section > .content::-webkit-scrollbar-thumb {
 	width: 450px;
 	text-align: center;
 	font-size: 50px;
+	margin-top: 50px;
 }
+
+#main_clock {
+	display: flex;
+	margin-top: 200px;
+	margin-bottom: 150px;
+	color: #03b300;
+	background-color: #000;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 1000px;
+}
+
+
+.clock {
+	display: inline-block;
+	overflow: hidden;
+	width: 400px;
+	height: 400px;
+	filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 100, 0, 0.5));
+}
+
+
+#main_table {
+	display: block;
+	margin: 200px 30px 150px;
+	color: #03b300;
+	background-color: #000;
+}
+
+table {
+	min-width: 500px;
+	width: auto;
+	flex: 1;
+	display: grid;
+	grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr)
+    minmax(150px, 1.67fr);
+}
+
+thead,
+tbody,
+tr {
+	display: contents;
+}
+
+th,
+td {
+	padding: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+th {
+	top: 0;
+	background: #03b300;
+	text-align: left;
+	font-weight: normal;
+	font-size: 20px;
+	color: black;
+	border: 3px green;
+}
+
+.resize-handle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: black;
+	opacity: 0;
+	width: 3px;
+}
+td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: green;
+	font-size: 15px;
+}
+
+tr:nth-child(even) td {
+	background: rgba(0, 100, 0, 0.5);
+	color: black;
+}
+
