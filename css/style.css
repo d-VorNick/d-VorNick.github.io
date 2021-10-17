@@ -324,5 +324,5 @@ tr:nth-child(even) td {
 .show {display:block;}
 
 .active {
-	background-color: black;
+	background-color: black !important;
 }
