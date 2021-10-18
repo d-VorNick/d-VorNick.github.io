@@ -16,4 +16,4 @@ function getDate()
     }
     document.getElementById('timedisplay').innerHTML = hours + ':' + minutes + ':' + seconds;
 }
-setInterval(getDate, 0);
+setInterval(getDate, 100);
