@@ -7,6 +7,7 @@ window.onload = function() {
             all_links[i].className += " active";
         }
     }
+    pageLoadTime;
 }
 
 function showMenu() {
@@ -21,3 +22,7 @@ window.onclick = function(event) {
         }
     }
 }
+
+const pageLoadTime = (function() {
+document.getElementById("pageload").innerHTML = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart + ' ms';
+})();
