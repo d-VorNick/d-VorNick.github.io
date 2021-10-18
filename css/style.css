@@ -256,6 +256,9 @@ input {
 	width: 100%;
 	padding: 1px;
 }
+.table-responsive > .content::-webkit-scrollbar {
+	background-color: #000;
+}
 
 .dropbtn {
 	border: #03b300 1px solid;
