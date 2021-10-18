@@ -2,7 +2,10 @@ const pageLoadTime = (function() {
 document.getElementById("pageload").innerHTML = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart + ' ms';
 });
 
-window.onload = function() {
+function showMenu() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+document.addEventListener('DOMContentLoaded', () => {
     const all_links = document.getElementById("myDropdown").getElementsByTagName("a");
     let i=0;
     let = len=all_links.length,
@@ -13,12 +16,7 @@ window.onload = function() {
         }
     }
     pageLoadTime();
-}
-
-function showMenu() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-document.addEventListener('DOMContentLoaded', () => {
+    
     const button = document.querySelector('.dropbtn');
     window.addEventListener('click', e => {
     if (!e.target.matches('.dropbtn')) {
