@@ -5,7 +5,7 @@ document.getElementById("pageload").innerHTML = window.performance.timing.domCon
 window.onload = function() {
     var all_links = document.getElementById("myDropdown").getElementsByTagName("a"),
         i=0, len=all_links.length,
-        full_path = location.href.pathname;
+        full_path = location.pathname;
     for(; i<len; i++) {
         if(all_links[i].pathname === full_path) {
             all_links[i].className += " active";
