@@ -1,3 +1,7 @@
+const pageLoadTime = (function() {
+document.getElementById("pageload").innerHTML = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart + ' ms';
+});
+
 window.onload = function() {
     var all_links = document.getElementById("myDropdown").getElementsByTagName("a"),
         i=0, len=all_links.length,
@@ -7,7 +11,7 @@ window.onload = function() {
             all_links[i].className += " active";
         }
     }
-    pageLoadTime;
+    pageLoadTime();
 }
 
 function showMenu() {
@@ -22,7 +26,3 @@ window.onclick = function(event) {
         }
     }
 }
-
-const pageLoadTime = (function() {
-document.getElementById("pageload").innerHTML = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart + ' ms';
-})();
