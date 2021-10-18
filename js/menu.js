@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             all_links[i].className += " active";
         }
     }
-    pageLoadTime();
     
     const button = document.querySelector('.dropbtn');
     window.addEventListener('click', e => {
