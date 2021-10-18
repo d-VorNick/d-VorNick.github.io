@@ -256,12 +256,13 @@ input {
 	width: 100%;
 	padding: 1px;
 }
-.table-responsive > .content::-webkit-scrollbar {
-	background-color: #000;
+
+.table-responsive::-webkit-scrollbar {
+    background-color: #000;
 }
 
-.table-responsive > .content::-webkit-scrollbar-thumb {
-	background-color: #03b300;
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: #03b300;
 }
 
 .dropbtn {
