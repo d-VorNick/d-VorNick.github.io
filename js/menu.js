@@ -5,9 +5,9 @@ document.getElementById("pageload").innerHTML = window.performance.timing.domCon
 window.onload = function() {
     var all_links = document.getElementById("myDropdown").getElementsByTagName("a"),
         i=0, len=all_links.length,
-        full_path = location.href.split("d-vornick.github.io")[1];
+        full_path = location.href.pathname;
     for(; i<len; i++) {
-        if(all_links[i].href.split("d-vornick.github.io")[1] === full_path) {
+        if(all_links[i].pathname === full_path) {
             all_links[i].className += " active";
         }
     }
