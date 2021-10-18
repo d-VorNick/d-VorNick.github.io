@@ -8,7 +8,7 @@ function showMenu() {
 document.addEventListener('DOMContentLoaded', () => {
     const all_links = document.getElementById("myDropdown").getElementsByTagName("a");
     let i=0;
-    let len=all_links.length,
+    let len=all_links.length;
     const full_path = location.pathname;
     for(; i<len; i++) {
         if(all_links[i].pathname === full_path) {
