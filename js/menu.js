@@ -5,7 +5,8 @@ document.getElementById("pageload").innerHTML = window.performance.timing.domCon
 function showMenu() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
+    pageLoadTime();
     const all_links = document.getElementById("myDropdown").getElementsByTagName("a");
     let i=0;
     let len=all_links.length;
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             all_links[i].className += " active";
         }
     }
-    
     const button = document.querySelector('.dropbtn');
     window.addEventListener('click', e => {
     if (!e.target.matches('.dropbtn')) {
