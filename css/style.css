@@ -240,8 +240,7 @@ input {
 }
 
 .table td {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px;
 	color: greenyellow;
 	border: greenyellow solid 1px;
 }
@@ -303,17 +302,14 @@ input {
 	background-color: black !important;
 }
 
+#main_photos {
+	margin: 200px 10% 150px 10%;
+}
+
 .photos_container {
 	width: 80%;
 	margin: 35px auto;
 	overflow: hidden;
-}
-
-.photos_container ul li {
-	list-style:none;
-	float: left;
-	width: 16%;
-	margin: 2% 2% 40px 2%;
 }
 
 .photos_container ul li section {
@@ -327,30 +323,36 @@ input {
 @media only screen and (max-width : 940px),
 only screen and (max-device-width : 940px){
 
-	.photos_container ul li {
-		width: 21%;
+	.about_photo {
+		font-size: 15px;
 	}
 }
 
 @media only screen and (max-width : 720px),
 only screen and (max-device-width : 720px){
 
-	.photos_container ul li {
-		width: 29%
+	.about_photo {
+		font-size: 17px;
 	}
 }
 
 @media only screen and (max-width : 530px),
 only screen and (max-device-width : 530px){
-	.photos_container ul li {
-		width: 46%
+	.about_photo {
+		font-size: 19px;
 	}
 }
 
 @media only screen and (max-width : 320px),
 only screen and (max-device-width : 320px){
-	.photos_container ul li {
-		width: 96%
+	.about_photo {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width : 274px), only screen and (max-device-width : 274px){
+	.photos_container {
+		display: none;
 	}
 }
 
@@ -359,5 +361,21 @@ only screen and (max-device-width : 320px){
 	border-radius: 7px;
 	width: fit-content;
 	padding: 5px;
+	margin-top: 10px;
+	max-width: 200px;
+	color: #014600;
+
+}
+
+.about_photo .photo {
+	width: 100%;
+	height: 150px;
+}
+
+#photo-wall {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
 	margin-top: 10px;
 }
