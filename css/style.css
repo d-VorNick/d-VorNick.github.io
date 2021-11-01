@@ -415,7 +415,7 @@ only screen and (max-device-width : 320px){
 }
 
 #queue-table th {
-	color: black;
+	color: greenyellow;
 	font-size: 25px;
 }
 
@@ -425,10 +425,12 @@ only screen and (max-device-width : 320px){
 
 .queue-button {
 	background-color: rgb(3 199 0 / 20%);
-	color: black;
+	color: greenyellow;
 	border: 0;
 	font-size: 20px;
 	font-family: monospace;
+	display: block;
+	margin: 10px;
 }
 
 .queue-button:hover {

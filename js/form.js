@@ -40,6 +40,10 @@ window.addEventListener('load', () => {
         const surname = form.querySelector('[name="Фамилия"]').value;
         const group = form.querySelector('[name="Группа"]').value;
         const labs = form.querySelector('[name="Лабы"]').value;
+        if (name === '' || surname === '' || group === '' || labs === '') {
+            alert("Заполните все поля!");
+            return;
+        }
         const data = {
             name: name,
             surname: surname,
@@ -52,6 +56,7 @@ window.addEventListener('load', () => {
         storage.setItem(String(id), serialData);
         storage.setItem("id", String(id));
         addRow(data);
+        e.target.reset();
     });
 
     document.getElementById("clear-btn").addEventListener('click', function(e) {

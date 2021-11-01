@@ -28,25 +28,26 @@
   <form class="queue-web" id="queue-web">
     <div class="queue-row">
       <label class="my-label" for="name">Имя:</label>
-      <input type="text" id="name" name="Имя" />
+      <input required type="text" id="name" name="Имя" />
     </div>
     <div class="queue-row">
       <label class="my-label" for="surname">Фамилия:</label>
-      <input type="text" id="surname" name="Фамилия" />
+      <input required type="text" id="surname" name="Фамилия" />
     </div>
     <div class="queue-row">
       <label class="my-label" for="group">Группа:</label>
-      <input type="text" id="group" name="Группа" />
+      <input required type="text" id="group" name="Группа" />
     </div>
     <div class="queue-row">
       <label class="my-label" for="labs">Лабы:</label>
-      <input type="text" id="labs" name="Лабы" />
+      <input required type="text" id="labs" name="Лабы" />
+    </div>
+    <div class="queue-row">
+      <button type="button" class="queue-button" id="queue-btn">Добавить</button>
+      <button type="button" class="queue-button" id="clear-btn">Очистить</button>
     </div>
   </form>
-  <div class="queue-row">
-    <button class="queue-button" id="queue-btn">Добавить</button>
-    <button class="queue-button" id="clear-btn">Очистить</button>
-  </div>
+
 
   <div class="table-responsive">
     <table id="queue-table">
