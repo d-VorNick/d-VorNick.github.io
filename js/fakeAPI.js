@@ -20,9 +20,8 @@ window.addEventListener('load', () => {
     let card_body = document.createElement('div');
     card_body.classList.add('card-body');
     card_body.setAttribute('id', "-1");
-    card_body.innerHTML = "<img src='../res/preloader.gif'>";
+    card_body.innerHTML = "<img class='preloader-img' src='../res/preloader.gif'>";
     preloader.appendChild(card_title);
-    preloader.appendChild(card_hr);
     preloader.appendChild(card_body);
     preloader.classList.add('card');
     const cards = document.getElementById("cards");

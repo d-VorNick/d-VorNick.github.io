@@ -453,6 +453,7 @@ only screen and (max-device-width : 320px){
 	max-width: 300px;
 	color: #014600;
 	margin-right: 10px;
+	min-height: 427px;
 }
 
 #cards {
@@ -477,5 +478,8 @@ only screen and (max-device-width : 320px){
 
 .card.preloader.disabled {
 	display: none;
+}
+
+.preloader-img {
 
 }
