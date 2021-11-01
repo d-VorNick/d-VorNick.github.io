@@ -377,6 +377,7 @@ only screen and (max-device-width : 320px){
 	flex-direction: row;
 	width: 100%;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	margin-top: 10px;
 }
 
