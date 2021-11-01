@@ -1,9 +1,9 @@
 function getDate()
 {
-    var date = new Date();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
     if(seconds < 10)
     {
         seconds = '0' + seconds;
