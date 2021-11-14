@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title>test</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/menu.js"></script>
-  <script src="../js/fakeAPI.js"></script>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <script src="../js/menu.js"></script>
+    <script src="../js/fakeAPI.js"></script>
 </head>
 <body>
 <header id="header" style="height: 50px">
-  <nav class="header__nav">
-    <div class="dropdown">
-      <a onclick="showMenu()" class="dropbtn">Навигация</a>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="/">Начальная</a>
-        <a href="/html/table.html">Таблица</a>
-        <a href="/html/test.html">Часы</a>
-        <a href="/html/photos.html">Галерея</a>
-        <a href="/html/form.html">Очередь</a>
-        <a href="/html/requests.html">Запросы</a>
-      </div>
-    </div>
-  </nav>
+    <nav class="header__nav">
+        <div class="dropdown">
+            <a onclick="showMenu()" class="dropbtn">Навигация</a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/">Начальная</a>
+                <a href="/html/table.html">Таблица</a>
+                <a href="/html/test.html">Часы</a>
+                <a href="/html/photos.html">Галерея</a>
+                <a href="/html/form.html">Очередь</a>
+                <a href="/html/requests.html">Запросы</a>
+            </div>
+        </div>
+    </nav>
 </header>
 <main id="main_card">
-  <button id="add-card">Добавить карточку</button>
-  <div id="cards">
-  </div>
+    <button id="add-card">Добавить карточку</button>
+    <div id="cards">
+        <div id="preloader" class="card preloader disabled">
+            <img class="preloader-img" src="../res/preloader.gif">
+        </div>
+    </div>
+    <template id="one-card">
+        <div class="card">
+            <h2></h2>
+            <hr style="border-color: green;">
+            <div class="card-body" id="card-body"></div>
+        </div>
+    </template>
+
 </main>
 <footer id="footer">
-  <input type="text" name="first_name" id="console" placeholder="Консоль" onchange='eventForm(this.value)'/>
-  <div class="footer__contacts">
-    <div id="pageload"></div>
-    <aside>
-      <h2>Мои контакты</h2>
-      <ul class="footer__contacts_links">
-        <li><a href="https://vk.com/id516018519" target="_blank">Вконтакте</a></li>
-        <li><a href="https://github.com/d-VorNick" target="_blank">GitHub</a></li>
-      </ul>
-    </aside>
-  </div>
+    <input type="text" name="first_name" id="console" placeholder="Консоль"/>
+    <div class="footer__contacts">
+        <div id="pageload"></div>
+        <aside>
+            <h2>Мои контакты</h2>
+            <ul class="footer__contacts_links">
+                <li><a href="https://vk.com/id516018519" target="_blank">Вконтакте</a></li>
+                <li><a href="https://github.com/d-VorNick" target="_blank">GitHub</a></li>
+            </ul>
+        </aside>
+    </div>
 </footer>
 </body>
 </html>
